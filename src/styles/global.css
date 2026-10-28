@@ -1,0 +1,55 @@
+
+/* Distribución principal */
+.contenido-principal {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  align-items: start;
+  gap: 24px;
+  max-width: 1100px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+.columna-libros,
+.columna-ficha {
+  min-width: 0;
+}
+
+/* Ajustes de la lista de libros */
+.columna-libros .biblioteca {
+  max-width: none;
+  margin: 0;
+  padding: 24px 0;
+}
+
+/* Lista personal*/
+.columna-ficha .ficha {
+  max-width: none;
+  margin: 0;
+  padding: 24px;
+  background: #f8f7f7;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px #0f172a0a;
+}
+
+.columna-ficha .ficha h2 {
+  margin-top: 0;
+  color: #03185c;
+}
+
+.columna-ficha .ficha ul {
+  padding-left: 22px;
+  line-height: 2;
+}
+
+.columna-ficha .ficha li {
+  margin-bottom: 6px;
+}
+
+/* Diseño para pantallas pequeñas */
+@media (max-width: 700px) {
+  .contenido-principal {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,17 @@
+[
+    {
+        "titulo" : "Don Quijote de la mancha",
+        "autor" : "Miguel de Cervantes",
+        "paginas" : 863
+    },
+    {
+        "titulo" : "Cien Años de Soledad",
+        "autor" : "Gabriel Garcia Marquez",
+        "paginas" : 471
+    },
+     {
+        "titulo" : "Los Rios Profundos",
+        "autor" : "José María Arguedas",
+        "paginas" : 464
+    }
+]

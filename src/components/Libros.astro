@@ -1,0 +1,46 @@
+---
+import libros from "../data/libros.json";
+
+const cantidadLibros = libros.length;
+
+const totalPaginas = libros.reduce(
+  (total, libro) => total + libro.paginas, 0
+);
+---
+
+<section class="biblioteca">
+  <header class="encabezado">
+    <strong>MI COLECCIÓN</strong>
+    <h1>Biblioteca de libros</h1>
+   </header>
+
+  <div class="lista-libros">
+    {libros.map((libro, index) => (
+      <article class="tarjeta-libro">
+        <hr />
+        <div class="informacion">
+          <p><strong>Titulo: </strong>{libro.titulo}</p>
+          <p class="autor"><strong>Autor: </strong> {libro.autor}: </p>
+          <span class="paginas"> <strong>Número de Páginas: </strong> {libro.paginas} páginas</span>
+        </div>
+        <hr />
+      </article>
+      
+    ))}
+  </div>
+
+  <div class="resumen">
+    <h2>RESUMEN</h2>
+    <div class="dato">
+      <strong class="etiqueta">Total de libros: </strong>
+      <span>{cantidadLibros}</span>
+    </div>
+
+    <div class="separador"></div>
+
+    <div class="dato">
+      <strong class="etiqueta">Total de páginas: </strong>
+      <span>{totalPaginas.toLocaleString("es-PE")}</span>
+    </div>
+  </div>
+</section>
